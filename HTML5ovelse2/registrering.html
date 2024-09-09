@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nb">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registreringskjema</title>
+    </head>
+    <body>
+        <header id="topp">
+            <a href="registrering.html"><h1>Registreringskjema</h1></a>
+            <section>
+                <h2>Registrer her!</h2>
+                <form method="post">
+                    <label for="navn">Navn:</label>
+                    <input type="text" name="navn" placeholder="Baker" id="navn" pattern="[A-Za-zæøåÆØÅ ]{2,}" required>
+                    <label>
+                        E-post:
+                        <input type="email" name="email" placeholder="eksempel@mail.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required>
+                    </label>
+                        <label>
+                        Passord:
+                        <input type="password" name="passord" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    </label>
+                    <label>
+                        Alder:
+                        <input type="number" placeholder="21" name="alder" min="18" max="99" required>
+                    </label>
+                    <label>
+                        Telefonnummer:
+                        <input type="number" name="telefonnummer" placeholder="12345678" pattern="[0-9]{8,12}" required>
+                    </label>
+                    <label>
+                        Fødselsdato:
+                        <input type="date" name="fodselsdato" max="2023-12-31" required>
+                    </label>
+                <br>
+                    <label>
+                        Mann:
+                        <input type="radio" name="valg" required>
+                    </label>
+                    <label>
+                        Kvinne:
+                        <input type="radio" name="valg" required>
+                    </label>
+                    <label>
+                        Annet:
+                        <input type="radio" name="valg" required>
+                    </label>
+                    <label>
+                        Land:
+                        <select name="land" required>
+                            <option value="">Velg Land</option>
+                            <option value="norge">Norge</option>
+                            <option value="sverige">Sverige</option>
+                            <option value="danmark">Danmark</option>
+                        </select>
+                    </label>
+                    <label>
+                        Personvern:
+                        <input type="checkbox" name="personvern" id="ja" value="godtar" required>
+                        <label for="ja">Jeg godtar</label>
+                        <input type="checkbox" name="personvern" id="nei" value="ikke">
+                        <label for="nei">Jeg godtar ikke</label>
+                    </label>
+                    <label>
+                        Send inn:
+                        <input type="submit" name="sendinn">
+                    </label>
+
+
+                </form>
+            </section>
+
+        </header>
+        
+        <footer id="bunn">
+            <p>2024 Mohamed Baker</p>
+            <p>mbalezai@hiof.no</p>
+            <a href="#topp">Tilbake til toppen</a>
+        </footer>
+    </body>
+</html>
